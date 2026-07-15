@@ -1,0 +1,33 @@
+{
+	"compatibility_date": "2026-05-23",
+	"compatibility_flags": ["global_fetch_strictly_public"],
+	"name": "abgl-astro",
+	"account_id": "74f01a9543de8c05320f562cdb6186de",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"assets": {
+		"directory": "./dist/client",
+		"binding": "ASSETS"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"routes": [
+		{ "pattern": "agri-biofuels.global", "custom_domain": true },
+		{ "pattern": "www.agri-biofuels.global", "custom_domain": true }
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "abgl-leads",
+			"database_id": "bce8bf06-bd0d-46c6-aa5e-fc698181fd4c",
+			"migrations_dir": "db/migrations"
+		}
+	],
+	"vars": {
+		"NOTIFY_INVESTOR": "corpfin@agri-biofuels.global",
+		"NOTIFY_CONTACT":  "hello@agri-biofuels.global",
+		"NOTIFY_NEWSLETTER": "newsletter@agri-biofuels.global",
+		"NOTIFY_FROM": "noreply@agri-biofuels.global",
+		"BRAND_NAME": "Agri-Biofuels Global"
+	}
+}
